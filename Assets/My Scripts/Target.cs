@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    [SerializeField] private GameObject gamemanager;
+    [SerializeField] private ScoreCounter scoreCounter;
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Projectile"))
         {
             Destroy(this.gameObject);
+            scoreCounter.AddScore();
         }
     }
 }
