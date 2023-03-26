@@ -5,8 +5,9 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     private int randomNumber;
-    private int enemyCount = 5;
-    private float enemySpeed = 50f;
+
+    [SerializeField] private int enemyCount;
+    [SerializeField] private float enemySpeed;
 
     [SerializeField] private Rigidbody targetPrefab;
 
@@ -17,14 +18,11 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         StartCoroutine(SpawnerCoroutine(targetPrefab));
-        Debug.Log("Startat programmet!");
     }
 
     IEnumerator SpawnerCoroutine(Rigidbody enemy)
     {
         yield return new WaitForSeconds(5f);
-
-        Debug.Log("Test! Utanför Coroutinens While loop!");
 
         while (enemyCount >= 0)
         {
@@ -52,8 +50,6 @@ public class EnemySpawner : MonoBehaviour
 
             yield return new WaitForSeconds(2f);
             yield return null;
-
-            Debug.Log("Test! I Coroutinens While loop!");
         }
         StopAllCoroutines();
     }

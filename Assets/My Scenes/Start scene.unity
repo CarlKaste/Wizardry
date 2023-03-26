@@ -511,7 +511,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174509291}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.5, y: 0, z: -2.25}
+  m_LocalPosition: {x: 0.5, y: -0.25, z: -2.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -980,7 +980,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378bf06f403beac4291e5879765bd364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 3636795475255524435, guid: 2534a24bbc8c48847a3966fac1b67ced,
+    type: 3}
   magicCastPoint: {fileID: 535082842}
   projectileSpeed: 800
 --- !u!114 &650014976
@@ -1189,7 +1190,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168553405}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.5, y: 0, z: -2.25}
+  m_LocalPosition: {x: -0.5, y: -0.25, z: -2.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1475,7 +1476,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569602327}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -2.25}
+  m_LocalPosition: {x: 0, y: -0.25, z: -2.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1700,6 +1701,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4977ba485fcc6984a93814796547dc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyCount: 5
+  enemySpeed: 50
   targetPrefab: {fileID: 945991106}
   spawner1: {fileID: 1168553406}
   spawner2: {fileID: 1569602328}
