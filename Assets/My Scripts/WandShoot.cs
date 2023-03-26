@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class WandShoot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Rigidbody projectilePrefab;
+    [SerializeField] private Transform magicCastPoint;
+    [SerializeField] private float projectileSpeed;
 
-    // Update is called once per frame
-    void Update()
+    public void ShootProjectile()
     {
-        
+        Rigidbody magicProjectile;
+        magicProjectile = Instantiate(projectilePrefab, magicCastPoint.position, magicCastPoint.rotation) as Rigidbody;
+        magicProjectile.AddForce(magicCastPoint.up * projectileSpeed);
     }
 }
