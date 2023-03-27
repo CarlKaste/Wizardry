@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
     private float addedEnemyCount;
 
     private int[] enemySpawnerNumber;
-    private Transform[] enemySpawner;
+    private List<Transform> enemySpawners = new List<Transform>();
 
     [SerializeField] private float enemyCount;
     [SerializeField] private float enemySpeed;
@@ -21,18 +21,19 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Transform spawner2;
     [SerializeField] private Transform spawner3;
 
-    private void Start()
+    private void Awake()
     {
         addedEnemyCount = enemyCount;
-        enemySpawner[0] = spawner1;
-        enemySpawner[1] = spawner2;
-        enemySpawner[2] = spawner3;
+
+        enemySpawners.Add(spawner1);
+        enemySpawners.Add(spawner2);
+        enemySpawners.Add(spawner3);
 
         Debug.Log("Start");
     }
 
     public void ActivateSpawner()
-    {
+    {/*
         for (int i = 0; i < enemyCount; i++)
         {
             randomNumber = Random.Range(0, 3);
@@ -40,18 +41,16 @@ public class EnemySpawner : MonoBehaviour
             Debug.Log("ActivateSpawner 'randomNumber' " + randomNumber);
             Debug.Log("ActivateSpawner 'enemySpawnerNumber' " + enemySpawnerNumber[i]);
         }
-
+        */
         StartCoroutine(SpawnerCoroutine());
     }
 
     public void TestSpawn()
     {
         randomNumber = Random.Range(0, 3);
-        Debug.Log(randomNumber);
         int spawnNumber = randomNumber;
-        Rigidbody enemy = Instantiate(targetPrefab, enemySpawner[spawnNumber].position, enemySpawner[spawnNumber].rotation);
-        enemy.AddForce(enemySpawner[spawnNumber].forward * enemySpeed);
-        Debug.Log(enemySpawner[spawnNumber]);
+        Rigidbody enemy = Instantiate(targetPrefab, enemySpawners[spawnNumber].position, enemySpawners[spawnNumber].rotation);
+        enemy.AddForce(enemySpawners[spawnNumber].forward * enemySpeed);
 
         /*
         randomNumber = Random.Range(1, 4);
@@ -82,11 +81,15 @@ public class EnemySpawner : MonoBehaviour
 
         while (enemyCount > 0)
         {
-            for (int i = 0; i < enemyCount; i++)
+            for (int i = 0; i < addedEnemyCount; i++)
             {
+                randomNumber = Random.Range(0, 3);
+                enemySpawnerNumber[i] = randomNumber;
+                Debug.Log("ActivateSpawner 'randomNumber' " + randomNumber);
+                Debug.Log("ActivateSpawner 'enemySpawnerNumber' " + enemySpawnerNumber[i]);
                 int spawnNumber = enemySpawnerNumber[i];
-                Rigidbody enemy = Instantiate(targetPrefab, enemySpawner[spawnNumber].position, enemySpawner[spawnNumber].rotation);
-                enemy.AddForce(enemySpawner[spawnNumber].forward * enemySpeed);
+                Rigidbody enemy = Instantiate(targetPrefab, enemySpawners[spawnNumber].position, enemySpawners[spawnNumber].rotation);
+                enemy.AddForce(enemySpawners[spawnNumber].forward * enemySpeed);
                 Debug.Log("SpawnerCoroutine 'spawnNumber' " + spawnNumber);
             }
 /*

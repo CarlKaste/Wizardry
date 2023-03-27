@@ -6,6 +6,11 @@ public class Target : MonoBehaviour
 {
     [SerializeField] private ScoreCounter scoreCounter;
 
+    private void Start()
+    {
+        ScoreCounter scoreCounter = GetComponent<ScoreCounter>();   
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Projectile"))
