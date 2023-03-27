@@ -5,9 +5,15 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     private int randomNumber;
+    private float addedEnemyCount;
 
-    [SerializeField] private int enemyCount;
+    private int[] enemySpawnerNumber;
+    private Transform[] enemySpawner;
+
+    [SerializeField] private float enemyCount;
     [SerializeField] private float enemySpeed;
+
+    [SerializeField] private GameObject portalTrigger;
 
     [SerializeField] private Rigidbody targetPrefab;
 
@@ -17,40 +23,98 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(SpawnerCoroutine(targetPrefab));
+        addedEnemyCount = enemyCount;
+        enemySpawner[0] = spawner1;
+        enemySpawner[1] = spawner2;
+        enemySpawner[2] = spawner3;
+
+        Debug.Log("Start");
     }
 
-    IEnumerator SpawnerCoroutine(Rigidbody enemy)
+    public void ActivateSpawner()
+    {
+        for (int i = 0; i < enemyCount; i++)
+        {
+            randomNumber = Random.Range(0, 3);
+            enemySpawnerNumber[i] = randomNumber;
+            Debug.Log("ActivateSpawner 'randomNumber' " + randomNumber);
+            Debug.Log("ActivateSpawner 'enemySpawnerNumber' " + enemySpawnerNumber[i]);
+        }
+
+        StartCoroutine(SpawnerCoroutine());
+    }
+
+    public void TestSpawn()
+    {
+        randomNumber = Random.Range(0, 3);
+        Debug.Log(randomNumber);
+        int spawnNumber = randomNumber;
+        Rigidbody enemy = Instantiate(targetPrefab, enemySpawner[spawnNumber].position, enemySpawner[spawnNumber].rotation);
+        enemy.AddForce(enemySpawner[spawnNumber].forward * enemySpeed);
+        Debug.Log(enemySpawner[spawnNumber]);
+
+        /*
+        randomNumber = Random.Range(1, 4);
+
+        if (randomNumber == 1)
+        {
+            Rigidbody e = Instantiate(targetPrefab, spawner1.position, spawner1.rotation);
+            e.AddForce(spawner1.forward * enemySpeed);
+        }
+
+        if (randomNumber == 2)
+        {
+            Rigidbody e = Instantiate(targetPrefab, spawner2.position, spawner2.rotation);
+            e.AddForce(spawner2.forward * enemySpeed);
+        }
+
+        if (randomNumber == 3)
+        {
+            Rigidbody e = Instantiate(targetPrefab, spawner3.position, spawner3.rotation);
+            e.AddForce(spawner3.forward * enemySpeed);
+        }
+        */
+    }
+
+    IEnumerator SpawnerCoroutine()
     {
         yield return new WaitForSeconds(5f);
 
-        while (enemyCount >= 0)
+        while (enemyCount > 0)
         {
-            randomNumber = Random.Range(1, 4);
-
+            for (int i = 0; i < enemyCount; i++)
+            {
+                int spawnNumber = enemySpawnerNumber[i];
+                Rigidbody enemy = Instantiate(targetPrefab, enemySpawner[spawnNumber].position, enemySpawner[spawnNumber].rotation);
+                enemy.AddForce(enemySpawner[spawnNumber].forward * enemySpeed);
+                Debug.Log("SpawnerCoroutine 'spawnNumber' " + spawnNumber);
+            }
+/*
             if (randomNumber == 1)
             {
-                enemy = Instantiate(targetPrefab, spawner1.position, spawner1.rotation) as Rigidbody;
+                Rigidbody enemy = Instantiate(targetPrefab, spawner1.position, spawner1.rotation);
                 enemy.AddForce(spawner1.forward * enemySpeed);
             }
 
-            else if (randomNumber == 2)
+            if (randomNumber == 2)
             {
-                enemy = Instantiate(targetPrefab, spawner2.position, spawner2.rotation) as Rigidbody;
+                Rigidbody enemy = Instantiate(targetPrefab, spawner2.position, spawner2.rotation);
                 enemy.AddForce(spawner2.forward * enemySpeed);
             }
-                
-            else if (randomNumber == 3)
+
+            if (randomNumber == 3)
             {
-                enemy = Instantiate(targetPrefab, spawner3.position, spawner3.rotation) as Rigidbody;
+                Rigidbody enemy = Instantiate(targetPrefab, spawner3.position, spawner3.rotation);
                 enemy.AddForce(spawner3.forward * enemySpeed);
             }
-                
+*/
             enemyCount--;
 
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(3f);
             yield return null;
         }
-        StopAllCoroutines();
+        enemyCount = addedEnemyCount;
+
+        //StopCoroutine("SpawnerCoroutine");
     }
 }
