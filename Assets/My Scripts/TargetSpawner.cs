@@ -7,7 +7,9 @@ public class TargetSpawner : MonoBehaviour
     [SerializeField] private Rigidbody target;
     private int posX;
     private int posY;
-    private int posZ = 13;
+    private int posZ1 = 9;
+    private int posZ2 = 23;
+    private int posZ3 = 42;
     private int targetCount;
 
     public bool noMoreTargets = false;
@@ -33,9 +35,9 @@ public class TargetSpawner : MonoBehaviour
 
         while (targetCount < 3)
         {
-            posX = Random.Range(-5, 6);
+            posX = Random.Range(-3, 4);
             posY = Random.Range(1, 9);
-            Instantiate(target, new Vector3(posX, posY, posZ), Quaternion.identity);
+            Instantiate(target, new Vector3(posX, posY, posZ1), Quaternion.identity);
             targetCount++;
         }
         yield return null;
@@ -47,9 +49,9 @@ public class TargetSpawner : MonoBehaviour
 
         while (targetCount < 5)
         {
-            posX = Random.Range(-5, 6);
+            posX = Random.Range(-3, 4);
             posY = Random.Range(1, 9);
-            Instantiate(target, new Vector3(posX, posY, posZ), Quaternion.identity);
+            Instantiate(target, new Vector3(posX, posY, posZ2), Quaternion.identity);
             targetCount++;
 
             
@@ -65,7 +67,7 @@ public class TargetSpawner : MonoBehaviour
         {
             posX = Random.Range(-5, 6);
             posY = Random.Range(1, 9);
-            Instantiate(target, new Vector3(posX, posY, posZ), Quaternion.identity);
+            Instantiate(target, new Vector3(posX, posY, posZ3), Quaternion.identity);
             targetCount++;
         }
 

@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class InGameMenu : MonoBehaviour
 {
-    public void EndGame()
+    public void MenuButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public void CloseButton()
+    {
+        this.gameObject.SetActive(false);
     }
 }

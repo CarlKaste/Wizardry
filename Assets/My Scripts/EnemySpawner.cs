@@ -21,6 +21,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Transform spawner2;
     [SerializeField] private Transform spawner3;
 
+
+
     private void Awake()
     {
         addedEnemyCount = enemyCount;
@@ -47,7 +49,7 @@ public class EnemySpawner : MonoBehaviour
 
     public void TestSpawn()
     {
-        randomNumber = Random.Range(0, 3);
+        randomNumber = Random.Range(0, 5);
         int spawnNumber = randomNumber;
         Rigidbody enemy = Instantiate(targetPrefab, enemySpawners[spawnNumber].position, enemySpawners[spawnNumber].rotation);
         enemy.AddForce(enemySpawners[spawnNumber].forward * enemySpeed);
