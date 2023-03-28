@@ -6,15 +6,15 @@ public class SecondTestTrigger : MonoBehaviour
 {
     [SerializeField] private SpawnerTimer spawnerTimer2;
     [SerializeField] private TargetSpawner targetSpawner;
-    [SerializeField] private TargetTrigger2ndWave targetTrigger2ndWave;
+    [SerializeField] private Animator secondFenceAnimator;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             spawnerTimer2.StartTimer();
-            targetTrigger2ndWave.gameObject.SetActive(true);
             targetSpawner.StartWave2();
+            secondFenceAnimator.SetTrigger("OpenFenceGate");
         }
     }
 }

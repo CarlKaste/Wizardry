@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CasteGateTrigger : MonoBehaviour
+public class InsideCastleTrigger : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
 

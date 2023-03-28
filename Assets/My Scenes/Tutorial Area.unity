@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnerTimer3: {fileID: 1260592082}
   targetSpawner: {fileID: 623235717}
-  targetTrigger3rdWave: {fileID: 55433593}
+  thirdFenceAnimator: {fileID: 1777036332}
 --- !u!65 &1948261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 42327235}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -636,7 +636,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &55433593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -649,10 +649,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cdd6642ac043a54f804ef3300dedd49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 1270090167}
-  thirdFenceAnimator: {fileID: 1777036332}
-  castleGateAnimator: {fileID: 8650874739147707036}
-  finalTutorialCanvas: {fileID: 810336948}
+  gameManager: {fileID: 0}
+  thirdFenceAnimator: {fileID: 0}
+  castleGateAnimator: {fileID: 0}
+  finalTutorialCanvas: {fileID: 0}
 --- !u!65 &55433595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -928,7 +928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -966,7 +966,7 @@ GameObject:
   - component: {fileID: 107262512}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1966,7 +1966,7 @@ GameObject:
   - component: {fileID: 160712216}
   m_Layer: 0
   m_Name: Courtyard
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2922,18 +2922,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201345588}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -9.508}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: -9.517}
+  m_LocalScale: {x: 0.010000001, y: 0.01, z: 1.0000002}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 145773216}
+  - {fileID: 1839995371}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.718, y: 1.831}
+  m_AnchoredPosition: {x: -3.8, y: 1.722}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &204592414
@@ -3966,7 +3967,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311570691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 1.79, z: 9.7}
+  m_LocalPosition: {x: 3, y: 3, z: 42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5118,7 +5119,7 @@ GameObject:
   - component: {fileID: 510526878}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5566,11 +5567,12 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528638546}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3.0249996}
+  m_LocalPosition: {x: 0, y: 0, z: -3.537}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1400647996}
+  - {fileID: 684727344}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5672,12 +5674,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1260281394}
+  - {fileID: 1614176716}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1.5}
+  m_AnchoredPosition: {x: -271.953, y: 150}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &549009866
@@ -5694,7 +5697,7 @@ GameObject:
   - component: {fileID: 549009868}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5789,7 +5792,7 @@ GameObject:
   - component: {fileID: 549216864}
   m_Layer: 0
   m_Name: Fence (1)
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5924,7 +5927,7 @@ GameObject:
   - component: {fileID: 573023399}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6120,7 +6123,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 5.77}
+  m_AnchoredPosition: {x: 0, y: 3}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &581670473
@@ -6328,7 +6331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70767759143614e43b726a27ce181339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsToAdd: 100
+  pointsToAdd: 50
   scoreText: {fileID: 154983840}
 --- !u!4 &656092704
 Transform:
@@ -6360,7 +6363,7 @@ GameObject:
   - component: {fileID: 658708853}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6524,6 +6527,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659470084}
   m_CullTransparentMesh: 1
+--- !u!1 &684727343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 684727344}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &684727344
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684727343}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 528638550}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &695467877
 GameObject:
   m_ObjectHideFlags: 0
@@ -6538,7 +6577,7 @@ GameObject:
   - component: {fileID: 695467879}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7412,7 +7451,7 @@ GameObject:
   - component: {fileID: 777502640}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7763,17 +7802,18 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 810336948}
   m_LocalRotation: {x: -0, y: -0.34122485, z: -0, w: 0.9399817}
-  m_LocalPosition: {x: 0, y: 0, z: 30.948002}
+  m_LocalPosition: {x: 0, y: 0, z: 43.691}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1847845120}
+  - {fileID: 909539134}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: -39.903, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.216, y: 1.5}
+  m_AnchoredPosition: {x: -2.33, y: 1.5}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &810336953
@@ -8063,7 +8103,7 @@ GameObject:
   - component: {fileID: 855515389}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8448,6 +8488,42 @@ Transform:
   m_Father: {fileID: 40875771}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &909539133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 909539134}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &909539134
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909539133}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 810336952}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &926201182
 GameObject:
   m_ObjectHideFlags: 0
@@ -8641,7 +8717,7 @@ GameObject:
   - component: {fileID: 934271126}
   m_Layer: 0
   m_Name: Fence (3)
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8717,7 +8793,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &939549671
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8808,7 +8884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c68a1fd1cc2b2524380d098984ab3f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstFenceAnimator: {fileID: 2494957170276180729}
+  firstFenceAnimator: {fileID: 0}
 --- !u!1 &953164192
 GameObject:
   m_ObjectHideFlags: 0
@@ -9005,7 +9081,7 @@ GameObject:
   - component: {fileID: 980326407}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Target
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9571,27 +9647,14 @@ GameObject:
   - component: {fileID: 1033932936}
   - component: {fileID: 1033932935}
   - component: {fileID: 1033932934}
-  - component: {fileID: 1033932933}
+  - component: {fileID: 1033932938}
   m_Layer: 0
-  m_Name: Castle Gate Trigger
+  m_Name: Inside Castle Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1033932933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033932932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ac83f74ebec75e4bb52f8a83099192a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManager: {fileID: 1270090167}
 --- !u!65 &1033932934
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9668,8 +9731,21 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1033932938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033932932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca3cf39267068b448195e0d81bcb71e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 1270090167}
 --- !u!1 &1047573926
 GameObject:
   m_ObjectHideFlags: 0
@@ -9961,7 +10037,7 @@ GameObject:
   - component: {fileID: 1076440779}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10396,7 +10472,7 @@ GameObject:
   - component: {fileID: 1234537998}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Target
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10782,7 +10858,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 5.77}
+  m_AnchoredPosition: {x: 0, y: 3}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1265016038
@@ -10941,7 +11017,7 @@ GameObject:
   - component: {fileID: 1318251851}
   m_Layer: 0
   m_Name: Inside Gate
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11136,7 +11212,7 @@ GameObject:
   - component: {fileID: 1331045631}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11399,8 +11475,8 @@ GameObject:
   - component: {fileID: 1341878922}
   - component: {fileID: 1341878921}
   m_Layer: 0
-  m_Name: Plane
-  m_TagString: Target
+  m_Name: Ground
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11654,7 +11730,7 @@ GameObject:
   - component: {fileID: 1369539050}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Target
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12377,7 +12453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnerTimer1: {fileID: 579553818}
   targetSpawner: {fileID: 623235717}
-  targetTriggerFirstWave: {fileID: 939549675}
+  firstFenceAnimator: {fileID: 2494957170276180729}
 --- !u!65 &1415365108
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12470,7 +12546,7 @@ GameObject:
   - component: {fileID: 1415745927}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Target
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12730,7 +12806,7 @@ GameObject:
   - component: {fileID: 1447262656}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12922,7 +12998,7 @@ GameObject:
   - component: {fileID: 1462246358}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13525,7 +13601,7 @@ GameObject:
   - component: {fileID: 1522253218}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13977,7 +14053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -14098,6 +14174,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556605000}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1614176715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1614176716}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1614176716
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614176715}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 528790182}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1619204519
 GameObject:
   m_ObjectHideFlags: 0
@@ -14543,7 +14655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1669493483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14556,7 +14668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3e4f2b0979b4d4cbd7ab86492ae9d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondFenceAnimator: {fileID: 2145030463}
+  secondFenceAnimator: {fileID: 0}
 --- !u!65 &1669493485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15022,7 +15134,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 5.77}
+  m_AnchoredPosition: {x: 0, y: 3}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1719868291
@@ -15069,7 +15181,7 @@ GameObject:
   - component: {fileID: 1727112972}
   m_Layer: 0
   m_Name: Fence (2)
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15291,18 +15403,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738500017}
-  m_LocalRotation: {x: -0, y: -0.36823946, z: -0, w: 0.929731}
-  m_LocalPosition: {x: 0, y: 0, z: -7.46}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_LocalRotation: {x: 0, y: -0.21106884, z: 0, w: 0.97747123}
+  m_LocalPosition: {x: 0, y: 0, z: -7.075}
+  m_LocalScale: {x: 0.010000002, y: 0.01, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1633977514}
   m_Father: {fileID: 0}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: -43.214, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -24.37, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.589, y: 1.5}
+  m_AnchoredPosition: {x: -1.909, y: 1.5}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1740635221
@@ -15319,7 +15431,7 @@ GameObject:
   - component: {fileID: 1740635223}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Target
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15479,6 +15591,118 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741168742}
   m_CullTransparentMesh: 1
+--- !u!1 &1743447595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1743447600}
+  - component: {fileID: 1743447599}
+  - component: {fileID: 1743447598}
+  - component: {fileID: 1743447597}
+  - component: {fileID: 1743447596}
+  m_Layer: 0
+  m_Name: Castle Gate Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1743447596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743447595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2393ca91fe3bf8c4183ce930434840a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finalTutorialCanvas: {fileID: 810336948}
+  gateAnimator: {fileID: 8650874739147707036}
+--- !u!65 &1743447597
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743447595}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.613619, y: 1, z: 2.3969307}
+  m_Center: {x: -0.003335476, y: 0, z: -0.69846535}
+--- !u!23 &1743447598
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743447595}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1743447599
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743447595}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1743447600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743447595}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.272, z: 42}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1757810806
 GameObject:
   m_ObjectHideFlags: 0
@@ -15686,7 +15910,7 @@ GameObject:
   - component: {fileID: 1777036332}
   m_Layer: 0
   m_Name: Fence Gate (2)
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16240,7 +16464,7 @@ GameObject:
   - component: {fileID: 1811232543}
   m_Layer: 0
   m_Name: Fence (4)
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16456,7 +16680,7 @@ GameObject:
   - component: {fileID: 1819110105}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Target
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16540,6 +16764,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819110103}
   m_Mesh: {fileID: 2186430941476567602, guid: 775248a8677100949a75b697d10dbb5c, type: 3}
+--- !u!1 &1839995370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1839995371}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1839995371
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839995370}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 201345592}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1847845119
 GameObject:
   m_ObjectHideFlags: 0
@@ -16837,7 +17097,7 @@ GameObject:
   - component: {fileID: 1936935636}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16933,7 +17193,7 @@ GameObject:
   - component: {fileID: 2494957170276180729}
   m_Layer: 0
   m_Name: Fence Gate
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17045,7 +17305,7 @@ GameObject:
   - component: {fileID: 1972767225}
   m_Layer: 0
   m_Name: Fence (5)
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17083,7 +17343,7 @@ GameObject:
   - component: {fileID: 1979370530}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17496,7 +17756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -17547,7 +17807,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009722773}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -12.952999}
+  m_LocalPosition: {x: 0, y: 0, z: -13.113}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17908,7 +18168,7 @@ GameObject:
   - component: {fileID: 2043084784}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18006,7 +18266,7 @@ GameObject:
   - component: {fileID: 2047166577}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18738,7 +18998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnerTimer2: {fileID: 1717018642}
   targetSpawner: {fileID: 623235717}
-  targetTrigger2ndWave: {fileID: 1669493483}
+  secondFenceAnimator: {fileID: 2145030463}
 --- !u!65 &2097649061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19074,7 +19334,7 @@ GameObject:
   - component: {fileID: 2145030463}
   m_Layer: 0
   m_Name: Fence Gate (1)
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21172,7 +21432,7 @@ GameObject:
   - component: {fileID: 7318108544726380909}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -33507,6 +33767,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Green Gloves Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 110992652286597847, guid: 8dcb9d4d7b8f4fb4aa548a2fabeec656,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 775045292067700845, guid: 8dcb9d4d7b8f4fb4aa548a2fabeec656,
         type: 3}
@@ -51710,7 +51975,7 @@ GameObject:
   - component: {fileID: 1663505645537085828}
   m_Layer: 0
   m_Name: Ramp
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -58638,7 +58903,7 @@ GameObject:
   - component: {fileID: 8650874739147707036}
   m_Layer: 0
   m_Name: Harrow
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -66119,7 +66384,7 @@ GameObject:
   - component: {fileID: 6959078050149027720}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76188,7 +76453,7 @@ GameObject:
   - component: {fileID: 8875659188392414244}
   m_Layer: 0
   m_Name: WallGate
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -90947,7 +91212,7 @@ GameObject:
   - component: {fileID: 4975555459280219277}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -94655,7 +94920,7 @@ GameObject:
   - component: {fileID: 4418354842602271056}
   m_Layer: 0
   m_Name: FrontGate
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -98419,7 +98684,7 @@ GameObject:
   - component: {fileID: 3217253389342930080}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -98571,7 +98836,7 @@ GameObject:
   - component: {fileID: 6116682824723077850}
   m_Layer: 0
   m_Name: Fence
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

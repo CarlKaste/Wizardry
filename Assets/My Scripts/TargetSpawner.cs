@@ -7,10 +7,15 @@ public class TargetSpawner : MonoBehaviour
     [SerializeField] private Rigidbody target;
     private int posX;
     private int posY;
-    private int posZ1 = 9;
-    private int posZ2 = 23;
-    private int posZ3 = 42;
+    private int posZ;
+
     private int targetCount;
+    private int targetCountStart;
+
+    private void Start()
+    {
+        targetCountStart = targetCount;
+    }
 
     public void StartWave1()
     {
@@ -34,10 +39,13 @@ public class TargetSpawner : MonoBehaviour
         while (targetCount < 3)
         {
             posX = Random.Range(-3, 4);
-            posY = Random.Range(1, 9);
-            Instantiate(target, new Vector3(posX, posY, posZ1), Quaternion.identity);
+            posY = Random.Range(3, 9);
+            posZ = Random.Range(2, 10);
+            Instantiate(target, new Vector3(posX, posY, posZ), Quaternion.identity);
             targetCount++;
         }
+
+        targetCount = targetCountStart;
         yield return null;
     }    
 
@@ -49,11 +57,12 @@ public class TargetSpawner : MonoBehaviour
         {
             posX = Random.Range(-3, 4);
             posY = Random.Range(1, 9);
-            Instantiate(target, new Vector3(posX, posY, posZ2), Quaternion.identity);
+            posZ = Random.Range(15, 23);
+            Instantiate(target, new Vector3(posX, posY, posZ), Quaternion.identity);
             targetCount++;
-
-            
         }
+
+        targetCount = targetCountStart;
         yield return null;
     }    
 
@@ -65,10 +74,12 @@ public class TargetSpawner : MonoBehaviour
         {
             posX = Random.Range(-5, 6);
             posY = Random.Range(1, 9);
-            Instantiate(target, new Vector3(posX, posY, posZ3), Quaternion.identity);
+            posZ = Random.Range(29, 42);
+            Instantiate(target, new Vector3(posX, posY, posZ), Quaternion.identity);
             targetCount++;
         }
 
+        targetCount = targetCountStart;
         yield return null;
     }
 }
