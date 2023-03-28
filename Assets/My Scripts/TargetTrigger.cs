@@ -8,8 +8,11 @@ public class TargetTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        Debug.Log("Aktiv");
+
         if (other.CompareTag("Target"))
         {
+            Debug.Log("Target Aktiv");
             this.gameObject.SetActive(false);
             firstFenceAnimator.SetTrigger("OpenFenceGate");
         }

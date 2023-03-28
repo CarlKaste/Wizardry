@@ -12,8 +12,6 @@ public class TargetSpawner : MonoBehaviour
     private int posZ3 = 42;
     private int targetCount;
 
-    public bool noMoreTargets = false;
-
     public void StartWave1()
     {
         StartCoroutine(TargetSpawn1());
@@ -45,7 +43,7 @@ public class TargetSpawner : MonoBehaviour
 
     IEnumerator TargetSpawn2()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
 
         while (targetCount < 5)
         {
@@ -61,7 +59,7 @@ public class TargetSpawner : MonoBehaviour
 
     IEnumerator TargetSpawn3()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
 
         while (targetCount < 7)
         {
@@ -70,9 +68,6 @@ public class TargetSpawner : MonoBehaviour
             Instantiate(target, new Vector3(posX, posY, posZ3), Quaternion.identity);
             targetCount++;
         }
-
-        yield return new WaitForSeconds(1f);
-        noMoreTargets = true;
 
         yield return null;
     }
