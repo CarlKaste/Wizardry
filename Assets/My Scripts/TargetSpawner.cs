@@ -39,7 +39,7 @@ public class TargetSpawner : MonoBehaviour
         while (targetCount < 3)
         {
             posX = Random.Range(-3, 4);
-            posY = Random.Range(3, 9);
+            posY = Random.Range(5, 9);
             posZ = Random.Range(2, 10);
             Instantiate(target, new Vector3(posX, posY, posZ), Quaternion.identity);
             targetCount++;
@@ -56,7 +56,7 @@ public class TargetSpawner : MonoBehaviour
         while (targetCount < 5)
         {
             posX = Random.Range(-3, 4);
-            posY = Random.Range(1, 9);
+            posY = Random.Range(5, 9);
             posZ = Random.Range(15, 23);
             Instantiate(target, new Vector3(posX, posY, posZ), Quaternion.identity);
             targetCount++;
@@ -73,7 +73,7 @@ public class TargetSpawner : MonoBehaviour
         while (targetCount < 7)
         {
             posX = Random.Range(-5, 6);
-            posY = Random.Range(1, 9);
+            posY = Random.Range(5, 9);
             posZ = Random.Range(29, 42);
             Instantiate(target, new Vector3(posX, posY, posZ), Quaternion.identity);
             targetCount++;
