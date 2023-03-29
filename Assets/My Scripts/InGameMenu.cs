@@ -7,6 +7,11 @@ public class InGameMenu : MonoBehaviour
 {
     private bool isActive = false;
 
+    private void Start()
+    {
+        this.gameObject.SetActive(false);
+    }
+
     public void ActivateMenu()
     {
         if (isActive == false)
