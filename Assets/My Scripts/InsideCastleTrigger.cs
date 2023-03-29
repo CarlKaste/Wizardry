@@ -10,7 +10,7 @@ public class InsideCastleTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            gameManager.EndGame();
+            gameManager.BackToMenu();
         }
     }
 }
