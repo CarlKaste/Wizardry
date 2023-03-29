@@ -7,6 +7,7 @@ public class FinalTestTrigger : MonoBehaviour
     [SerializeField] private SpawnerTimer spawnerTimer3;
     [SerializeField] private TargetSpawner targetSpawner;
     [SerializeField] private Animator thirdFenceAnimator;
+    [SerializeField] private InGameMenuPosition scoreCounterMenu;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,6 +16,7 @@ public class FinalTestTrigger : MonoBehaviour
             spawnerTimer3.StartTimer();
             targetSpawner.StartWave3();
             thirdFenceAnimator.SetTrigger("OpenFenceGate");
+            scoreCounterMenu.SwitchToLastposition();
         }
     }
 }

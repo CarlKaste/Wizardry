@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(StartGameCoroutine());
     }
 
-    public void BackToMenu()
+    public void ReturnToMenu()
     {
         StartCoroutine(BackToMenuCoroutine());
     }

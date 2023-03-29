@@ -5,12 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class InGameMenu : MonoBehaviour
 {
-    private bool isActive;
+    private bool isActive = false;
 
     public void ActivateMenu()
     {
-        isActive = !isActive;
-
         if (isActive == false)
         {
             this.gameObject.SetActive(true);
@@ -20,5 +18,7 @@ public class InGameMenu : MonoBehaviour
         {
             this.gameObject.SetActive(false);
         }
+
+        isActive = !isActive;
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class TargetSpawner : MonoBehaviour
 {
     [SerializeField] private Rigidbody target;
+ 
     private int posX;
     private int posY;
     private int posZ;
@@ -70,7 +71,7 @@ public class TargetSpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
 
-        while (targetCount < 7)
+        while (targetCount < 12)
         {
             posX = Random.Range(-5, 6);
             posY = Random.Range(5, 9);
