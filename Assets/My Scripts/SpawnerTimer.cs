@@ -7,7 +7,6 @@ public class SpawnerTimer : MonoBehaviour
 {
     [SerializeField] private Text timerText;
 
-
     public void StartTimer()
     {
         StartCoroutine(TimerCoroutine(timerText));
