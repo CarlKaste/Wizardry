@@ -16,6 +16,7 @@ public class InGameMenuPosition : MonoBehaviour
     public void SwitchToFirstPosition()
     {
         transform.position = firstPosition;
+        this.gameObject.SetActive(false);
     }
 
     public void SwitchToSecondPosition()

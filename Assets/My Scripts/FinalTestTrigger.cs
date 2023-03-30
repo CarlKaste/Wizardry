@@ -8,6 +8,7 @@ public class FinalTestTrigger : MonoBehaviour
     [SerializeField] private TargetSpawner targetSpawner;
     [SerializeField] private Animator thirdFenceAnimator;
     [SerializeField] private InGameMenuPosition scoreCounterMenu;
+    [SerializeField] private AudioSource fenceGateSound;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,7 +17,16 @@ public class FinalTestTrigger : MonoBehaviour
             spawnerTimer3.StartTimer();
             targetSpawner.StartWave3();
             thirdFenceAnimator.SetTrigger("OpenFenceGate");
+            fenceGateSound.Play();
             scoreCounterMenu.SwitchToLastposition();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            this.gameObject.SetActive(false);
         }
     }
 }
