@@ -5,6 +5,7 @@ using UnityEngine;
 public class TargetSpawner : MonoBehaviour
 {
     [SerializeField] private Rigidbody target;
+    [SerializeField] private GameObject secondTestTrigger;
  
     private int posX;
     private int posY;

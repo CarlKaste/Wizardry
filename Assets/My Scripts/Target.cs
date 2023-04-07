@@ -11,6 +11,14 @@ public class Target : MonoBehaviour
 
     private Vector3 projectilePosition;
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Projectile"))
+        {
+            StartCoroutine(TargetCoroutine());
+        }
+    }
+
     private IEnumerator TargetCoroutine()
     {
         projectilePosition = this.transform.position;
@@ -23,13 +31,5 @@ public class Target : MonoBehaviour
         scoreCounter.AddScore();
 
         yield return null;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Projectile"))
-        {
-            StartCoroutine(TargetCoroutine());
-        }
     }
 }
