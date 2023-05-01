@@ -29,14 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7015197398533261502}
-  m_LocalRotation: {x: -0.042235117, y: -0.7058443, z: -0.7058443, w: 0.042235117}
+  m_LocalRotation: {x: -0.042230397, y: -0.70572096, z: -0.70596737, w: 0.042245135}
   m_LocalPosition: {x: -18.97, y: 1.027856, z: -49.45}
   m_LocalScale: {x: 7, y: 7, z: 7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: -173.151}
 --- !u!33 &7015197398534235148
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -112,12 +112,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f986e85bfc09f44eb6e8895f7ae4407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreCounter: {fileID: 0}
   explosionEffect: {fileID: 358637981425055526, guid: eb02c2611d903bc46a4e736bdc65c061,
     type: 3}
   electricEffect: {fileID: 7131401307255788800, guid: fa6aff7cf1012ea46890f27eb7970458,
     type: 3}
   targetAnimator: {fileID: 983213554489176706}
+  scoreCounter: {fileID: 6771021804127550039, guid: 8a92c3e1a86ca8a468128816120b7a2e,
+    type: 3}
 --- !u!54 &8581600573671923981
 Rigidbody:
   m_ObjectHideFlags: 0

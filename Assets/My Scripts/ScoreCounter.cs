@@ -5,20 +5,21 @@ using UnityEngine.UI;
 
 public class ScoreCounter : MonoBehaviour
 {
-    private float points;
+    private int currentPoints;
 
-    [SerializeField] private float pointsToAdd;
+    [SerializeField] private int pointsToAdd;
     [SerializeField] private Text scoreText;
 
-    private void Update()
+    private void Start()
     {
-        int addPoints = (int)points;
-        scoreText.text = addPoints.ToString();
+        currentPoints = 0;
+        scoreText.text = currentPoints.ToString();
     }
 
     public void AddScore()
     {
-        points = points + pointsToAdd;
+       currentPoints = currentPoints + pointsToAdd;
+       scoreText.text = currentPoints.ToString();
     }
 
     public void ShowScoreBoard()

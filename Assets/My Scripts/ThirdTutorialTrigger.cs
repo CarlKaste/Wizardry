@@ -12,7 +12,6 @@ public class ThirdTutorialTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             thirdTutorialCanvas.SetActive(true);
-            firstTestTrigger.SetActive(true);
         }
     }
 

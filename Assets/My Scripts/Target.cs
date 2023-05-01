@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    [SerializeField] private ScoreCounter scoreCounter;
     [SerializeField] private GameObject explosionEffect;
     [SerializeField] private GameObject electricEffect;
     [SerializeField] private Animator targetAnimator;
+    [SerializeField] private ScoreCounter scoreCounter;
 
     private Vector3 projectilePosition;
 
@@ -23,6 +23,7 @@ public class Target : MonoBehaviour
     {
         projectilePosition = this.transform.position;
         Instantiate(electricEffect, projectilePosition, Quaternion.identity);
+
         targetAnimator.SetTrigger("Hit");
         yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);

@@ -6,18 +6,16 @@ public class TargetSpawner : MonoBehaviour
 {
     [SerializeField] private Rigidbody target;
     [SerializeField] private GameObject secondTestTrigger;
- 
+
+    [SerializeField] private int targetCountFirst;
+    [SerializeField] private int targetCountSecond;
+    [SerializeField] private int targetCountLast;
+
     private int posX;
     private int posY;
     private int posZ;
 
-    private int targetCount;
-    private int targetCountStart;
-
-    private void Start()
-    {
-        targetCountStart = targetCount;
-    }
+    public Rigidbody[] targets;
 
     public void StartWave1()
     {
@@ -38,16 +36,14 @@ public class TargetSpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
 
-        while (targetCount < 3)
+        for (int i = 0; i < targetCountFirst; i++)
         {
             posX = Random.Range(-3, 4);
             posY = Random.Range(5, 9);
             posZ = Random.Range(2, 10);
-            Instantiate(target, new Vector3(posX, posY, posZ), Quaternion.identity);
-            targetCount++;
+            targets[i] = Instantiate(target, new Vector3(posX, posY, posZ), Quaternion.identity);
         }
 
-        targetCount = targetCountStart;
         yield return null;
     }    
 
@@ -55,16 +51,14 @@ public class TargetSpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
 
-        while (targetCount < 5)
+        for (int i = 0; i < targetCountSecond; i++)
         {
             posX = Random.Range(-3, 4);
             posY = Random.Range(5, 9);
             posZ = Random.Range(15, 23);
-            Instantiate(target, new Vector3(posX, posY, posZ), Quaternion.identity);
-            targetCount++;
+            targets[i] = Instantiate(target, new Vector3(posX, posY, posZ), Quaternion.identity);
         }
 
-        targetCount = targetCountStart;
         yield return null;
     }    
 
@@ -72,16 +66,14 @@ public class TargetSpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
 
-        while (targetCount < 12)
+        for (int i = 0; i < targetCountLast; i++)
         {
             posX = Random.Range(-5, 6);
             posY = Random.Range(5, 9);
             posZ = Random.Range(29, 42);
-            Instantiate(target, new Vector3(posX, posY, posZ), Quaternion.identity);
-            targetCount++;
+            targets[i] = Instantiate(target, new Vector3(posX, posY, posZ), Quaternion.identity);
         }
 
-        targetCount = targetCountStart;
         yield return null;
     }
 }
