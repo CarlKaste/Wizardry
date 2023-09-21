@@ -45271,6 +45271,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   secondTestTrigger: {fileID: 0}
+  targetCountFirst: 0
+  targetCountSecond: 0
+  targetCountLast: 0
+  targets: []
 --- !u!4 &878413320
 Transform:
   m_ObjectHideFlags: 0
@@ -56606,7 +56610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6194a870e97cfe14081ff58549a6852a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultHandsModel: 0
+  DefaultHandsModel: 1
   LoadHandSelectionFromPrefs: 0
   ToggleHandsInput: 20
   LeftHandGFXHolder: {fileID: 35569831}
