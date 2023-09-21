@@ -117,7 +117,7 @@ MonoBehaviour:
   electricEffect: {fileID: 7131401307255788800, guid: fa6aff7cf1012ea46890f27eb7970458,
     type: 3}
   targetAnimator: {fileID: 983213554489176706}
-  scoreCounter: {fileID: 6771021804127550039, guid: 8a92c3e1a86ca8a468128816120b7a2e,
+  scoreCounter: {fileID: 9201344743014813052, guid: 8a92c3e1a86ca8a468128816120b7a2e,
     type: 3}
 --- !u!54 &8581600573671923981
 Rigidbody:

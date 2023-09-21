@@ -21,15 +21,17 @@ public class Target : MonoBehaviour
 
     private IEnumerator TargetCoroutine()
     {
+        
         projectilePosition = this.transform.position;
         Instantiate(electricEffect, projectilePosition, Quaternion.identity);
 
         targetAnimator.SetTrigger("Hit");
         yield return new WaitForSeconds(1f);
-        Destroy(this.gameObject);
+        this.gameObject.SetActive(false);
         Instantiate(explosionEffect, projectilePosition, Quaternion.identity);
 
         scoreCounter.AddScore();
+        Destroy(this.gameObject);
 
         yield return null;
     }
