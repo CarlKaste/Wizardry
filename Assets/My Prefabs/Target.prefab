@@ -117,8 +117,22 @@ MonoBehaviour:
   electricEffect: {fileID: 7131401307255788800, guid: fa6aff7cf1012ea46890f27eb7970458,
     type: 3}
   targetAnimator: {fileID: 983213554489176706}
-  scoreCounter: {fileID: 9201344743014813052, guid: 8a92c3e1a86ca8a468128816120b7a2e,
-    type: 3}
+  scoreEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9201344743014813052, guid: 8a92c3e1a86ca8a468128816120b7a2e,
+          type: 3}
+        m_TargetAssemblyTypeName: ScoreCounter, Assembly-CSharp
+        m_MethodName: AddScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!54 &8581600573671923981
 Rigidbody:
   m_ObjectHideFlags: 0

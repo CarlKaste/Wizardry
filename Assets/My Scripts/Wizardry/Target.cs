@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Target : MonoBehaviour
 {
     [SerializeField] private GameObject explosionEffect;
     [SerializeField] private GameObject electricEffect;
     [SerializeField] private Animator targetAnimator;
+    [SerializeField] private UnityEvent scoreEvent;
 
     private Vector3 projectilePosition;
 
@@ -15,6 +17,7 @@ public class Target : MonoBehaviour
         if (collision.gameObject.CompareTag("Projectile"))
         {
             StartCoroutine(TargetCoroutine());
+            scoreEvent.Invoke();
         }
     }
 

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class InGameMenu : MonoBehaviour
 {
-    private bool isActive = false;
+    private bool isActive = true;
 
     public void ActivateMenu()
     {
