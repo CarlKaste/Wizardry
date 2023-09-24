@@ -7,7 +7,6 @@ public class Target : MonoBehaviour
     [SerializeField] private GameObject explosionEffect;
     [SerializeField] private GameObject electricEffect;
     [SerializeField] private Animator targetAnimator;
-    [SerializeField] private ScoreCounter scoreCounter;
 
     private Vector3 projectilePosition;
 
@@ -30,7 +29,6 @@ public class Target : MonoBehaviour
         this.gameObject.SetActive(false);
         Instantiate(explosionEffect, projectilePosition, Quaternion.identity);
 
-        scoreCounter.AddScore();
         Destroy(this.gameObject);
 
         yield return null;
